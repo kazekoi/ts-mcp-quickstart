@@ -8,12 +8,13 @@
     "weather": "./build/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && chmod 755 build/index.js"
+    "test": "vitest",
+    "build": "tsc && chmod 755 build/index.js",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check ."
   },
-  "files": [
-    "build"
-  ],
+  "files": ["build"],
   "engines": {
     "node": ">=22.0.0"
   },
@@ -23,7 +24,9 @@
     "@modelcontextprotocol/sdk": "^1.9.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.14.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
   }
 }
