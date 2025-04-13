@@ -85,7 +85,7 @@ function formatAlert(feature: AlertFeature): string {
 
 // Register weather tools
 server.tool(
-    "get-alerts",
+    "get-alerts-XXX",
     "Get weather alerts for a state",
     {
         state: z.string().length(2).describe("Two-letter state code (e.g. CA, NY)"),
@@ -133,7 +133,7 @@ server.tool(
 );
 
 server.tool(
-    "get-forecast",
+    "get-forecast-XXX",
     "Get weather forecast for a location",
     {
         latitude: z.number().min(-90).max(90).describe("Latitude of the location"),
